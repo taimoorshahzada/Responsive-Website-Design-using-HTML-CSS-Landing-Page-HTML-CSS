@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+body{
+    color: #e6e6e6;
+    font-family: 'Poppins';
+}
+.animate{
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    transition: 6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation: disappear 3s forwards;
+}
+@keyframes disappear{
+    50%{
+        height: 70%;
+
+    }
+    100%{
+        height: 0%;
+        display: none;
+    }
+}
+.bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(background.jpg) no-repeat 50% 50%;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+
+}
+header{
+    transition: all 1s;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 5%;
+    height: 100px;
+
+}
+header .logo{
+    font-weight: 600;
+    font-family: 'Monument';
+    font-size: 25px;
+
+}
+header ul{
+    list-style: none;
+    display: flex;
+
+}
+header ul li{
+    margin: 0px 13px;
+
+}
+header ul li a{
+    text-decoration: none;
+    align-items: center;
+    font-size: 18px;
+    border-bottom: 0.5px solid white;
+    font-weight: lighter;
+    color: #e6e6e6;
+
+}
+.content{
+    transition: all 1s;
+    position: absolute;
+    top: 35%;
+    right: 10%;
+    text-align: right;
+    margin-left: 10%;
+
+}
+.content h1{
+    font-weight: 600;
+    font-family: 'Monument';
+    font-size: 40px;
+    margin: 20px 0;
+
+}
+.content p{
+    font-weight: 200;
+    font-size: 19px;
+    margin: 20px 0;
+
+}
+.content a{
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 20px;
+    font-family: 'Monument';
+    font-weight: 500;
+    background-color: black;
+    text-align: center;
+    color: #e6e6e6;
+    margin: 10px 15px;
+}
+@media(max-width: 480px){
+    .content h1{
+        font-size: 30px;
+    }
+    .content p{
+        font-size: 20px;
+    }
+    .content{
+        top: 30%;
+    }
+
+}
+@media(max-width: 360px){
+    .content{
+        top: 25%;
+
+    }
+    .content h1{
+        font-size: 25px;
+
+    }
+    .content p{
+        font-size: 15px;
+
+    }
+    .content a{
+        font-size: 18px;
+        padding: 7px 10px;
+    }
+    header .logo{
+        font-size: 19px;
+    }
+    header ul li a{
+        font-size: 15px;
+    }
+}
